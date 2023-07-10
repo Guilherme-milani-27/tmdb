@@ -45,4 +45,23 @@ O cinema, foi inventado pelos irmãos Auguste e Louis Lumiere em 1895, em Lyon, 
 
 ### Análise gráfica
 
-Produzindo gráficos com esses dados, fica mais evidente o domínio americano no mundo cinematográfico. Comparando o idioma inglês, com todos os outros somados, temos um gráfico de barras:
+Produzindo gráficos com esses dados, fica claro o domínio americano no mundo cinematográfico. Comparando o idioma inglês, com todos os outros somados, temos um gráfico de pizza:
+<div align="center">
+<img src="img/pizza.png" />
+</div>
+
+
+A presença do idioma inglês é 15 vezes maior do que todos os outros idiomas somados. Com um gráfico em barras essa disparidade fica mais evidente ainda:
+
+
+<div align="center">
+<img src="img/barras.png" />
+</div>
+
+### Análise de outros idiomas
+
+Realizando uma análise no restante dos idiomas, excluindo o inglês, é possível observar a influência do francês em relação aos idiomas restantes, tendo o dobro da frequência do segundo colocado, o espanhol. Em terceiro, há o mandarin, enquanto o português aparece em 11°, atrás de idiomas como russo e coreano, mostrando que a industria cinematográfica lusofônica não é tão relevante no cenário mundial, apesar de alguns filmes terem concorrido ao Oscar. O gráfico a seguir apresenta a frequência de cada idioma presente na base de dados:
+
+<div align="center">
+<img src="img/noenglish.png" />
+</div>
