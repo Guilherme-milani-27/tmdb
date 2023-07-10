@@ -3,7 +3,9 @@
 Análise de notas e idiomas de filmes, de uma base de dados. O intuito desse projeto é definir qual o filme melhor avaliado pelos usuários, além de definir qual idioma está mais presente na produção de filmes. 
 
 ## Base de dados
-A base de dados utilizada, está disponível no site do Kaggle: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+A primeira base de dados utilizada, está disponível no site do Kaggle: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
+Nome: tmdb_5000_movies
 
 Essa base de dados possui 4803 filmes cadastrados, e os respectivos atributos:
 
@@ -30,17 +32,43 @@ Essa base de dados possui 4803 filmes cadastrados, e os respectivos atributos:
 | Nota | Nota do filme |
 | Contagem | Quantidade de avaliações que o filme recebeu |
 
+A segunda e a terceira base de dados, foi disponibilizada pela Alura: https://www.alura.com.br
+
+Nome: movies
+
+Uma base de dados de filmes, com 9742 obras cadastradas e os respectivos atributos:
+
+| **Atributos** | **Descrição** |
+| ------------------- | ------------------- |
+| Id | Número de identificação do filme |
+| Título | Nome do filme |
+| Gênero | Gênero do filme (ção, comédia, suspense, etc) |
+
+E uma relacionado a avaliações de filmes, com 100836 registros e os seguintes atributos:
+
+Nome: ratings
+
+| **Atributos** | **Descrição** |
+| ------------------- | ------------------- |
+| Usuário | Número de identificação do usuário |
+| Filme | Número do filme |
+| Nota | Nota atribuida ao filme |
+| Momento | Marca temporal (Momento em que o filme foi lançado) |
 
 ## Tratamento de dados
 
 Originalmente, a base de dados está em inglês. Para melhor compreensão, o primeiro passo foi a tradução dos registros e das colunas. 
 Não há dados nulos (NA).
+Para a base de dados "ratings", referente as avaliações dos filmes, o número de identificação dos filmes foi substituído pelo nome do filme, com auxílio da base de dados "movies".
 
 ## Análise dos idiomas originais
 
 Há filmes com 37 idiomas diferentes na base de dados, desde inglês até pashto.
+
 Como esperado, o idioma mais frequente é o inglês, com 4505 filmes dos 4803 presentes na base de dados, o que corresponde a 93,79% dos filmes. Os Estados Unidos são lideres no mercado da sétima arte, devido a isso, há essa discrepância entre eles e a França, que estão em segundo lugar. 
+
 Os franceses possuem 70 filmes na base de dados, o que corresponde a apenas 1,45%. 
+
 O cinema, foi inventado pelos irmãos Auguste e Louis Lumiere em 1895, em Lyon, na França, por isso o país se encontra na segunda colocação.
 
 ### Análise gráfica
@@ -60,8 +88,35 @@ A presença do idioma inglês é 15 vezes maior do que todos os outros idiomas s
 
 ### Análise de outros idiomas
 
-Realizando uma análise no restante dos idiomas, excluindo o inglês, é possível observar a influência do francês em relação aos idiomas restantes, tendo o dobro da frequência do segundo colocado, o espanhol. Em terceiro, há o mandarin, enquanto o português aparece em 11°, atrás de idiomas como russo e coreano, mostrando que a industria cinematográfica lusofônica não é tão relevante no cenário mundial, apesar de alguns filmes terem concorrido ao Oscar. O gráfico a seguir apresenta a frequência de cada idioma presente na base de dados:
+Realizando uma análise no restante dos idiomas, excluindo o inglês, é possível observar a superioridade do francês em relação aos idiomas restantes, tendo o dobro da frequência do segundo colocado, o espanhol. Em terceiro, há o mandarin, enquanto o português aparece em 11°, atrás de idiomas como russo e coreano, mostrando que a industria cinematográfica lusofônica não é tão relevante no cenário mundial, apesar de alguns filmes terem concorrido ao Oscar. 
+
+O gráfico a seguir apresenta a frequência de cada idioma presente na base de dados:
 
 <div align="center">
 <img src="img/noenglish.png" />
 </div>
+
+## Análise notas
+
+Algo a se atentar em uma análise de notas de avaliação, é a quantidade de avaliações. Por exemplo nesta base de dados, os filmes, Stiff Upper Lips, Dancer, Texas Pop. 81, Me You and Five Bucks, e Little Big Top possuem a maior nota média de 10.0 com uma soma de votos entre eles de 5 votos, ou seja, cada um dos filmes recebeu apenas uma avaliação cada. É impossível afirmar que a nota do filme é de fato 10 na visão dos usuários, pois essa é uma avaliação específica de uma pessoa.
+
+Já o filme The Shawshank Redemption possui 8205 votos e uma nota média de 8.5, sendo esse de fato, o filme mais bem avaliado.
+
+O filme com a pior avaliação média, é o longa-metragem 2012, com 4903 notas atribuídas e média de 5.6.
+
+## Análise da base de dados "ratings"
+
+As notas presentes nesse banco de dados estão no intervalo de 0 a 5. 
+
+A média das notas de todos os filmes é de 3.5, a mediana apresenta o mesmo valor, 3.5. Já a nota com a maior frequência, a moda, é a nota 4.0. Com essas informações, é esperado que o gráfico de distribuição de frequências, apresente um comportamento assimétrico a esquerda, pois a moda é maior que a média e a mediana.
+
+O gráfico abaixo, demonstra esse comportamento:
+
+<div align="center">
+<img src="img/freq_notas.png" />
+</div>
+
+A maioria das avaliações atribuídas aos filmes pelos usuários, estão acima da média.
+
+### Análise de avaliações fornecidas pelo usuário n° 1
+
