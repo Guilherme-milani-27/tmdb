@@ -118,5 +118,60 @@ O gráfico abaixo, demonstra esse comportamento:
 
 A maioria das avaliações atribuídas aos filmes pelos usuários, estão acima da média.
 
-### Análise de avaliações fornecidas pelo usuário n° 1
+### Análise da média de notas por filme
 
+Assim como na base de dados tmdb, as notas estão em um intervalo de 0 a 5
+
+Para essa base de dados, a nota média dos filmes é de 3.26, a mediana 3.42, e a moda 4.0. O comportamento da curva esperada é de assimetria a esquerda, pois a média é menor que a mediana, que é menor que a moda, assim como na base de dados analisada anteriormente. O gráfico a seguir apresenta esse comportamento:
+
+<div align="center">
+<img src="img/avg_notas.png" />
+</div>
+
+Um forma diferente de observar esse comportamento, é por meio de um gráfico boxplot. É perceptível a assimetra a esquerda, assim como a presença de alguns Outliers. A maior parte das notas está concentrada entre 3.0 e 4.0, o que indica uma alta qualidade os filmes.
+
+<div align="center">
+<img src="img/boxplot_avg_nota.png" />
+</div>
+
+Por fim, um gráfico do tipo histograma, para reforçar o comportamento da distribuição dos dados:
+
+<div align="center">
+<img src="img/hist_avg.png" />
+</div>
+
+### Comparando os filmes "Toy Story" e "Jumanji"
+
+Realizando uma análise de comparação entre dois filmes, "Toy Story" e "Jumanji", com a finalidade de definir, de acordo com os usuários, qual o melhor filme entre os selecionados.
+
+Toy Story obteve 232 avaliações, enquanto Jumanji apenas 29. Em relação as medidas centrais, a nota média foi de 4.37 e 3.95, a mediana 5.0 e 4.0, assim como a moda, para Toy Story e Jumanji respectivamente. Os dois gráficos abaixo, apresentam a distribuição de frequência das notas de cada um dos filmes:
+
+<div align="center">
+<img src="img/freq_nota.png" />
+</div>
+
+<div align="center">
+<img src="img/freq_nota_jumanji.png" />
+</div>
+
+É possivel observar que, o gráfico referente ao filme Toy Story, possui assimetria a esquerda. Fica evidente que a nota máxima 5, foi a mais frequente, o que indica a otima qualidade do filme. Em relação ao filme Jumanji, a curva se comporta aproximadamente como uma distribuição normal, com uma leve assimetria a esquerda. A nota 4 foi a mais frequente, o que confere uma boa qualidade ao filme, porém menor em relação ao Toy Story.
+
+Com auxílio do gráfico boxplot, a diferença na distribuição de frequência das notas entre os dois filmes fica mais evidente:
+
+<div align="center">
+<img src="img/boxplot_toy_story_jumanji.png" />
+</div>
+
+Com esse gráfico, fica evidente a superioridade do filme Toy Story, em relação ao filme Jumanji. Basicamente, 75 % das pessoas que assistiram o filme, avaliaram com nota 4, enquanto apenas 50%, deram a mesma nota, para o filme Jumanji. 
+
+É possivel perceber a existência de Outliers, para Toy Story, e não para o filme Jumanji. Esses outliers, podem ter sido gerados por um mecanismo distinto, ou até mesmo por um conjunto de pessoas, que por algum motivo específico, avaliam com nota baixa, em forma de protesto ou retaliação, algo muito comum na industria cinematográfica. Ambos os filmes possuem, praticamente o mesmo desvio padrão.
+
+# Conclusão
+
+Para a primeira base de dados analisada, o idioma com o maior número de filmes produzidos é o inglês, com quase 94% dos filmes presentes no banco de dados. Em segundo lugar, vem o francês, responsável por apenas 1,5% dos longa-metragem. A industria luso-fônica possui pouco impacto na cinematográfia mundial, sendo responsável por apenas 0.2% das produções.
+
+Analisando as avaliações atribuidas pelos usuários, o filme The Shawshank Redemption, obteve a maior média, com nota 8.5, com mais de 8000 votos. A pior classificação, fica com o longa "2012", com nota média de 5.6 com quase 5000 avaliações.
+
+Filmes como Stiff Upper Lips, Dancer, Texas Pop. 81, Me You and Five Bucks, e Little Big Top, apresentam nota média de 10.0, porém com baixíssima quantidade de votos.
+
+Na comparação entre os filmes Toy Story e Jumanji, a animação se destaca sobre o longa de aventura, com uma nota média de 4.4, contra 4.0 da produção dirigida por Jake Kasdan e Joe Johnston.
