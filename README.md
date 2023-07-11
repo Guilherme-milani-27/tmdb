@@ -131,7 +131,7 @@ Para essa base de dados, a nota média dos filmes é de 3.26, a mediana 3.42, e 
 Um forma diferente de observar esse comportamento, é por meio de um gráfico boxplot. É perceptível a assimetra a esquerda, assim como a presença de alguns Outliers. A maior parte das notas está concentrada entre 3.0 e 4.0, o que indica uma alta qualidade os filmes.
 
 <div align="center">
-<img src="img/boxplot_avg_nota.png" />
+<img src="img/a.png" />
 </div>
 
 Por fim, um gráfico do tipo histograma, para reforçar o comportamento da distribuição dos dados:
