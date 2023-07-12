@@ -2,7 +2,21 @@
 
 Análise de notas e idiomas de filmes, de uma base de dados. O intuito desse projeto é definir qual o filme melhor avaliado pelos usuários, além de definir qual idioma está mais presente na produção de filmes. 
 
-## Base de dados
+# Sumário
+
+* [1. Base de dados](##1-Base-de-dados)
+* [2. Tratamento de dados](##2-tratamento-de-dados)
+* [3. Análise dos idiomas originais](##3-análise-dos-idiomas-originais)
+* [3.1 Análise gráfica](###3.1-análise-gráfica)
+* [3.2 Análise de outros idiomas](###3.2-análise-de-outros-idiomas)
+* [4. Análise notas](##4-análise-notas)
+* [5. Análise da base de dados "ratings"](##5-análise-da-base-de-dados)
+* [5.1 Análise da média de notas por filme](###5.1-análise-da-média-de-notas-por-filme)
+* [5.2 Comparando os filmes "Toy Story" e "Jumanji"](5.2-comparando-os-filmes-toy-story-e-jumanji)
+* [6. Conclusão](##6-conclusao)
+
+
+## 1. Base de dados
 A primeira base de dados utilizada, está disponível no site do Kaggle: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
 
 Nome: tmdb_5000_movies
@@ -55,13 +69,13 @@ Nome: ratings
 | Nota | Nota atribuida ao filme |
 | Momento | Marca temporal (Momento em que o filme foi lançado) |
 
-## Tratamento de dados
+## 2. Tratamento de dados
 
 Originalmente, a base de dados está em inglês. Para melhor compreensão, o primeiro passo foi a tradução dos registros e das colunas. 
 Não há dados nulos (NA).
 Para a base de dados "ratings", referente as avaliações dos filmes, o número de identificação dos filmes foi substituído pelo nome do filme, com auxílio da base de dados "movies".
 
-## Análise dos idiomas originais
+## 3. Análise dos idiomas originais
 
 Há filmes com 37 idiomas diferentes na base de dados, desde inglês até pashto.
 
@@ -71,7 +85,7 @@ Os franceses possuem 70 filmes na base de dados, o que corresponde a apenas 1,45
 
 O cinema, foi inventado pelos irmãos Auguste e Louis Lumiere em 1895, em Lyon, na França, por isso o país se encontra na segunda colocação.
 
-### Análise gráfica
+### 3.1 Análise gráfica
 
 Produzindo gráficos com esses dados, fica claro o domínio americano no mundo cinematográfico. Comparando o idioma inglês, com todos os outros somados, temos um gráfico de pizza:
 <div align="center">
@@ -86,7 +100,7 @@ A presença do idioma inglês é 15 vezes maior do que todos os outros idiomas s
 <img src="img/barras.png" />
 </div>
 
-### Análise de outros idiomas
+### 3.2 Análise de outros idiomas
 
 Realizando uma análise no restante dos idiomas, excluindo o inglês, é possível observar a superioridade do francês em relação aos idiomas restantes, tendo o dobro da frequência do segundo colocado, o espanhol. Em terceiro, há o mandarin, enquanto o português aparece em 11°, atrás de idiomas como russo e coreano, mostrando que a industria cinematográfica lusofônica não é tão relevante no cenário mundial, apesar de alguns filmes terem concorrido ao Oscar. 
 
@@ -96,7 +110,7 @@ O gráfico a seguir apresenta a frequência de cada idioma presente na base de d
 <img src="img/noenglish.png" />
 </div>
 
-## Análise notas
+## 4. Análise notas
 
 Algo a se atentar em uma análise de notas de avaliação, é a quantidade de avaliações. Por exemplo nesta base de dados, os filmes, Stiff Upper Lips, Dancer, Texas Pop. 81, Me You and Five Bucks, e Little Big Top possuem a maior nota média de 10.0 com uma soma de votos entre eles de 5 votos, ou seja, cada um dos filmes recebeu apenas uma avaliação cada. É impossível afirmar que a nota do filme é de fato 10 na visão dos usuários, pois essa é uma avaliação específica de uma pessoa.
 
@@ -104,7 +118,7 @@ Já o filme The Shawshank Redemption possui 8205 votos e uma nota média de 8.5,
 
 O filme com a pior avaliação média, é o longa-metragem 2012, com 4903 notas atribuídas e média de 5.6.
 
-## Análise da base de dados "ratings"
+## 5. Análise da base de dados "ratings"
 
 As notas presentes nesse banco de dados estão no intervalo de 0 a 5. 
 
@@ -118,7 +132,7 @@ O gráfico abaixo, demonstra esse comportamento:
 
 A maioria das avaliações atribuídas aos filmes pelos usuários, estão acima da média.
 
-### Análise da média de notas por filme
+### 5.1 Análise da média de notas por filme
 
 Assim como na base de dados tmdb, as notas estão em um intervalo de 0 a 5
 
@@ -140,7 +154,7 @@ Por fim, um gráfico do tipo histograma, para reforçar o comportamento da distr
 <img src="img/hist_avg.png" />
 </div>
 
-### Comparando os filmes "Toy Story" e "Jumanji"
+### 5.2 Comparando os filmes "Toy Story" e "Jumanji"
 
 Realizando uma análise de comparação entre dois filmes, "Toy Story" e "Jumanji", com a finalidade de definir, de acordo com os usuários, qual o melhor filme entre os selecionados.
 
@@ -166,7 +180,7 @@ Com esse gráfico, fica evidente a superioridade do filme Toy Story, em relaçã
 
 É possivel perceber a existência de Outliers, para Toy Story, e não para o filme Jumanji. Esses outliers, podem ter sido gerados por um mecanismo distinto, ou até mesmo por um conjunto de pessoas, que por algum motivo específico, avaliam com nota baixa, em forma de protesto ou retaliação, algo muito comum na industria cinematográfica. Ambos os filmes possuem, praticamente o mesmo desvio padrão.
 
-# Conclusão
+# 6. Conclusão
 
 Para a primeira base de dados analisada, o idioma com o maior número de filmes produzidos é o inglês, com quase 94% dos filmes presentes no banco de dados. Em segundo lugar, vem o francês, responsável por apenas 1,5% dos longa-metragem. A industria luso-fônica possui pouco impacto na cinematográfia mundial, sendo responsável por apenas 0.2% das produções.
 
